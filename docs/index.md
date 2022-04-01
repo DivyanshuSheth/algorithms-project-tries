@@ -1,22 +1,6 @@
-# Trie Search
-A little Search Engine implementation using Trie Data Structure.
-
-[*See Documentation*](https://rohitkaushal7.github.io/trie-search)
-
-### scripts
-- `make`
-    Compiles and runs the project.
-- `make cmp`
-    Compiles the code.
-- make run
-    Runs the already build code without compiling.
-
-### Manual (trie-search)
-- `./trie-search`
-- `./trie-search [path_to_file]`
-- `./trie-search [path_to_file] [pattern_to_search]`
 ---
 
+---
 #  Trie
 In computer science, a trie, also called digital tree or prefix tree, is a kind of search tree—an ordered tree data structure used to store a dynamic set or associative array where the keys are usually strings.
 
@@ -41,7 +25,7 @@ Unlike a binary search tree, no node in the tree stores the key associated with 
 
 # Run the project (linux)
 - in the root directory of the project run 
-    - `make` : it will compile the project and produce the executable in `build/Trie_Search`
+    - `make` : it will compile the project and produce the executable in `build/trie-search`
     - data files are stored in `data/` directory which consist of string units each in different line.
         - you can store custom strings in words.txt or add a custom file in data/ directory.
 - execute the executable directly. OR `make run` in the root directory.
@@ -51,15 +35,13 @@ Unlike a binary search tree, no node in the tree stores the key associated with 
 ## Run the project (win)
 - Compile the file `src/main.cpp` in windows to produce the executable and then run the executable.
 
+# Manual
+- `./trie-search`
+- `./trie-search [path_to_file]`
+- `./trie-search [path_to_file] [pattern_to_search]`
+
 # Example
 ### Universal Search
-![](./docs/images/uni-search.png)
+![](./images/uni-search.png)
 ### Prefix Search 
-![](./docs/images/pre-search.png)
-
-## Contributors
-
-- [Rohit Kaushal](https://www.github.com/RohitKaushal7) <br>
-- [Nishit Attrey](https://www.github.com/NishitAttrey) <br>
-- [Vishal Shrivastava](https://www.github.com/vishalshrivastava16) <br>
-
+![](./images/pre-search.png)
