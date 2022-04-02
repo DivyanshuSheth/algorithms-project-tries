@@ -3,8 +3,6 @@
 #include "utils.cpp"
 using namespace std;
 
-void test();
-
 int main(int argc, char **argv) {
     string file_name;
     Trie T;
