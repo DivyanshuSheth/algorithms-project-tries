@@ -10,7 +10,6 @@ int main(int argc, char **argv) {
     Trie T;
     vector <string> strings_data;
     int choice;
-    // if File provided in Arguments.
     
     if (argc > 1) {
         file_name = argv[1];
@@ -20,20 +19,16 @@ int main(int argc, char **argv) {
     else {
         cout << "What data do you want to search -- dictionary/movies/music? Please select one and type the same:\n";
         cin >> file_name;
-        // cerr << "loading ...";
         strings_data = get_array_from_file("data/" + file_name + ".txt");
-        // cerr << "Done.\n";
     }
 
     for (string word : strings_data) {
         T.insert(word);
     }
-    // If pattern in Arguments.
     
     if (argc > 2) {
         string pattern = argv[2];
-        for (string w : search(strings_data, pattern))
-        {
+        for (string w : search(strings_data, pattern)) {
             cout << w << "\n";
         }
         return 0;
@@ -42,7 +37,7 @@ int main(int argc, char **argv) {
     cout << "###################\n";
     cout << "Please enter the number corresponding to the search you'd like to perform.\n1. Exact Search - searches the data for an exact string\n2. Prefix Search - searches the data for elements having a given prefix\n3. Universal Search - searches the data for elements having the given string as a substring\n0. Exit.\n";
     cin >> choice;
-    getchar(); // get the new line character
+    getchar(); 
 
     while(choice) {
         string pattern;
@@ -51,7 +46,6 @@ int main(int argc, char **argv) {
             cout << "Enter search string (leave empty to list everything - for prefix search and universal search):\n";
             getline(cin, pattern);
         }
-
 
         if (choice == 1) {
             if (T.search_exact(pattern)) {
@@ -83,7 +77,7 @@ int main(int argc, char **argv) {
         cout << "###################\n";
         cout << "Please enter the number corresponding to the search you'd like to perform.\n1. Exact Search - search for an exact string\n2. Prefix Search - search for all strings beginning with a prefix\n3. Universal Search - search for all strings that contain the search query\n0. Exit\n";
         cin >> choice;
-        getchar(); // get the new line character
+        getchar();
     }
 
     return 0;
