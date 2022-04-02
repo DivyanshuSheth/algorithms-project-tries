@@ -133,7 +133,6 @@ vector<string> Trie::search_pre(string str)
     return results;
 }
 
-// Delete a string
 bool Trie::remove(string str)
 {
     _remove(root, str, 0);
@@ -145,15 +144,13 @@ bool Trie::_remove(TrieNode *current, string str, int index)
 
     if (index == str.length())
     {
-        // End of the word ?
         if (!current->isEndOfWord[0])
         {
-            return false; // word don't exist.
+            return false; 
         }
         current->isEndOfWord[0] = false;
 
-        // if no more children
-        return current->children.size() == 0; // true?
+        return current->children.size() == 0; 
     }else if(index < 0 ){
 
         cout<<"Someting is wrong \n";
@@ -164,16 +161,15 @@ bool Trie::_remove(TrieNode *current, string str, int index)
 
     if (!current->children[ch])
     {
-        return false; // word don't exist.
+        return false; 
     }
 
     bool shouldDeleteCurrentNode = _remove(current->children[ch], str, index + 1);
 
-    // after recursion
     if (shouldDeleteCurrentNode)
     {
         current->children.erase(ch);
-        return current->children.size() == 0; // true ?
+        return current->children.size() == 0; 
     }
 
     return false;
