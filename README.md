@@ -1,7 +1,9 @@
 Efficient Data Querying using Tries
 
 -18QE30001, Laxman Pradeep
+
 -18QE30002, Shubhesh Anand
+
 -18QE30008, Divyanshu Sheth
 
 To compile and run the project:
