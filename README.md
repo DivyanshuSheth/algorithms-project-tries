@@ -1,4 +1,4 @@
-Efficient Data Querying using Tries
+# Efficient Data Querying using Tries
 
 Algorithms Term Project, IIT KGP, Spring 2022
 
